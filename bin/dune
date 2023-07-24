@@ -1,0 +1,4 @@
+(executable
+ (public_name jsip_final)
+ (name main)
+ (libraries jsip_final))
