@@ -5,4 +5,5 @@ lib: [
 ]
 bin: [
   "_build/install/default/bin/jsip_final"
+  "_build/install/default/bin/jsip_final_bin"
 ]

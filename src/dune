@@ -1,0 +1,6 @@
+(executable
+ (public_name jsip_final)
+ (name api_data)
+ (libraries cohttp-async core_unix.command_unix core curl file_path lambdasoup uri)
+ (preprocess
+  (pps ppx_jane)))
