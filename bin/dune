@@ -1,4 +1,6 @@
 (executable
- (public_name jsip_final)
+ (public_name jsip_final_bin)
  (name main)
- (libraries jsip_final))
+ (libraries core)
+ (preprocess
+  (pps ppx_jane)))

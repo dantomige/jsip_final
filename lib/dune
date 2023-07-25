@@ -1,2 +1,5 @@
 (library
- (name jsip_final))
+ (name jsip_final_lib)
+ (libraries core)
+ (preprocess
+  (pps ppx_jane)))
