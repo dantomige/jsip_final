@@ -1,4 +1,0 @@
-(lang dune 3.9)
-(name jsip_final)
-(sections (lib .) (bin ../../bin))
-(files (lib (META dune-package opam)) (bin (jsip_final jsip_final_bin)))

@@ -1,9 +1,0 @@
-lib: [
-  "_build/install/default/lib/jsip_final/META"
-  "_build/install/default/lib/jsip_final/dune-package"
-  "_build/install/default/lib/jsip_final/opam"
-]
-bin: [
-  "_build/install/default/bin/jsip_final"
-  "_build/install/default/bin/jsip_final_bin"
-]
