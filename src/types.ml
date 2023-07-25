@@ -85,7 +85,11 @@ end
 
 module Data = struct
   module T = struct
-    type t = (Crypto.t * Day.t) list [@@deriving compare, sexp]
+    type t =
+      { bitcoin : Bitcoin.t
+      ; day : Day.t
+      }
+    [@@deriving compare, sexp]
   end
 
   include T
