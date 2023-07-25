@@ -86,7 +86,7 @@ end
 module Data = struct
   module T = struct
     type t =
-      { bitcoin : Bitcoin.t
+      { crypto : Crypto.t
       ; day : Day.t
       }
     [@@deriving compare, sexp]
