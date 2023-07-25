@@ -9,26 +9,18 @@ module Time = struct
   include Comparable.Make (T)
 end
 
-module Open = struct
+module Price = struct
   module T = struct
-    type t =
-      { time : Time.t
-      ; price : float
-      }
-    [@@deriving compare, sexp]
+    type t = float [@@deriving compare, sexp]
   end
 
   include T
   include Comparable.Make (T)
 end
 
-module Close = struct
+module Volume = struct
   module T = struct
-    type t =
-      { time : Time.t
-      ; price : float
-      }
-    [@@deriving compare, sexp]
+    type t = float [@@deriving compare, sexp]
   end
 
   include T
@@ -62,11 +54,11 @@ module Market = struct
   include Comparable.Make (T)
 end
 
-module Bitcoin = struct
+module Crypto = struct
   module T = struct
     type t =
-      | WBTC
-      | BTC
+      | BitCoin
+      | Ethereum
     [@@deriving compare, sexp]
   end
 
@@ -77,8 +69,9 @@ end
 module Day = struct
   module T = struct
     type t =
-      { open_ : Open.t
-      ; close : Close.t
+      { price : Price.t
+      ; time : Time.t
+      ; volume : Volume.t
       ; low : Low.t
       ; high : High.t
       ; market_cap : Market.t
@@ -92,11 +85,7 @@ end
 
 module Data = struct
   module T = struct
-    type t =
-      { bitcoin : Bitcoin.t
-      ; day : Day.t
-      }
-    [@@deriving compare, sexp]
+    type t = (Crypto.t * Day.t) list [@@deriving compare, sexp]
   end
 
   include T
